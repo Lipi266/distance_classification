@@ -1,0 +1,45 @@
+name: Run Jupyter Notebook on Code Change
+
+on:
+  push:
+    paths:
+      - '**.ipynb'  # Trigger only when Jupyter notebooks change
+  pull_request:
+    paths:
+      - '**.ipynb'
+  workflow_dispatch:  # Allows manual trigger from GitHub Actions UI
+
+jobs:
+  run-notebook:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Set Up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'  # Use the Python version you need
+
+      - name: Install Dependencies
+        run: |
+          pip install --upgrade pip
+          pip install notebook wandb papermill
+
+      - name: Log in to Weights & Biases
+        run: wandb login ${{ secrets.WANDB_API_KEY }}
+
+      - name: Run Jupyter Notebook
+        run: |
+          papermill lipi_lab5.ipynb output.ipynb
+
+      - name: Commit and Push Updated Notebook
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+          git add output.ipynb
+          git commit -m "Auto-run notebook and update output"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
