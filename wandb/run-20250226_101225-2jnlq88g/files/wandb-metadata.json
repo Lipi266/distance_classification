@@ -1,0 +1,44 @@
+{
+  "os":  "macOS-14.5-arm64-arm-64bit-Mach-O",
+  "python":  "CPython 3.13.0",
+  "startedAt":  "2025-02-26T04:42:25.097220Z",
+  "program":  "/Users/lipisinghal/distance_classification-1/distance_classification/lipi_lab5.ipynb",
+  "codePath":  "lipi_lab5.ipynb",
+  "git":  {
+    "remote":  "https://github.com/Lipi266/distance_classification.git",
+    "commit":  "352b3b271624a4238901ccf0f3b80c6b14b3a914"
+  },
+  "email":  "lipisinghal31@gmail.com",
+  "root":  "/Users/lipisinghal/distance_classification-1/distance_classification",
+  "host":  "Lipis-MacBook-Air.local",
+  "executable":  "/Users/lipisinghal/distance_classification-1/distance_classification/venv/bin/python",
+  "codePathLocal":  "lipi_lab5.ipynb",
+  "cpu_count":  8,
+  "cpu_count_logical":  8,
+  "disk":  {
+    "/":  {
+      "total":  "494384795648",
+      "used":  "186073604096"
+    },
+    "/System/Volumes/Data":  {
+      "total":  "494384795648",
+      "used":  "186073604096"
+    }
+  },
+  "memory":  {
+    "total":  "8589934592"
+  },
+  "cpu":  {
+    "count":  8,
+    "countLogical":  8
+  },
+  "apple":  {
+    "name":  "Apple M2",
+    "ecpuCores":  4,
+    "pcpuCores":  4,
+    "gpuCores":  10,
+    "memoryGb":  8,
+    "swapTotalBytes":  "1073741824",
+    "ramTotalBytes":  "8589934592"
+  }
+}

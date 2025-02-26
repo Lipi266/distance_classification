@@ -1,0 +1,1 @@
+2025-02-26 10:20:27.650 Python[18868:239064] WARNING: Secure coding is automatically enabled for restorable state! However, not on all supported macOS versions of this application. Opt-in to secure coding explicitly by implementing NSApplicationDelegate.applicationSupportsSecureRestorableState:.
